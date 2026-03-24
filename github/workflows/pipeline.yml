@@ -17,8 +17,11 @@ jobs:
         with:
           python-version: 3.9
 
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+
       - name: Install Dependencies
-        run: pip install -r engine_data/deployment/requirements.txt
+        run: pip install -r engine_data/requirements.txt
 
       - name: Upload Dataset to Hugging Face
         env:
@@ -38,8 +41,11 @@ jobs:
         with:
           python-version: 3.9
 
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+
       - name: Install Dependencies
-        run: pip install -r engine_data/deployment/requirements.txt
+        run: pip install -r engine_data/requirements.txt
 
       - name: Run Data Preparation
         env:
@@ -59,8 +65,11 @@ jobs:
         with:
           python-version: 3.9
 
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+
       - name: Install Dependencies
-        run: pip install -r engine_data/deployment/requirements.txt
+        run: pip install -r engine_data/requirements.txt
 
       - name: Model Training
         env:
@@ -79,6 +88,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.9
+
+      - name: Upgrade pip
+        run: pip install --upgrade pip
 
       - name: Install Dependencies
         run: pip install -r engine_data/deployment/requirements.txt
